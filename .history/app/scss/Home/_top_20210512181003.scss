@@ -1,0 +1,18 @@
+.top {
+  padding: 150px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 72px;
+    text-transform: uppercase;
+    @extend %impact-900;
+
+    & span {
+      color: #acda53;
+    }
+  }
+}

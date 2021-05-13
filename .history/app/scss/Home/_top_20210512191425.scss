@@ -1,0 +1,60 @@
+.top {
+  padding: 150px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 72px;
+    text-transform: uppercase;
+    @extend %impact-900;
+
+    & span {
+      color: #acda53;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    @extend %impact-900;
+  }
+
+  &__btn {
+    width: 290px;
+    height: 53px;
+    background-color: #acda53;
+    color: #fffefe;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    padding: 20px;
+    background-color: #2d2c2c;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+}

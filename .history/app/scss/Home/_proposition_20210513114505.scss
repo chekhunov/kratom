@@ -1,0 +1,16 @@
+.proposition {
+  height: 100%;
+  max-width: 100%;
+  max-height: 504px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    width: 75px;
+  }
+  &__inner {
+    max-width: 640px;
+  }
+}

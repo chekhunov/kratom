@@ -1,0 +1,22 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    &__link {
+    }
+  }
+}

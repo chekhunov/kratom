@@ -1,0 +1,16 @@
+.about {
+  padding: 75px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 625px;
+    height: 383px;
+    margin-right: 40px;
+    object-fit: cover;
+  }
+}

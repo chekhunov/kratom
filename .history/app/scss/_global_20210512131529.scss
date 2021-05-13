@@ -1,0 +1,61 @@
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: $default;
+  background-color: $bgdefault;
+  @extend %montserrat-400;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--big {
+    max-width: 1320;
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a,
+button {
+  outline: transparent;
+  cursor: pointer;
+}
+
+.logo {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 36px;
+  color: $title;
+  text-align: center;
+  @extend %impact-900;
+}
+
+.link {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 123px;
+  left: 0;
+  right: 0;
+  font-size: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}

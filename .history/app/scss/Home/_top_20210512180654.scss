@@ -1,0 +1,12 @@
+.top {
+  p70 &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 72px;
+    @extend %impact-900;
+  }
+}

@@ -1,0 +1,9 @@
+.proposition {
+  max-height: 504px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__inner {
+    max-width: 640px;
+  }
+}
