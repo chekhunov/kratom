@@ -1,0 +1,11 @@
+.advantages {
+  &__items {
+    &__item {
+      &::after {
+        display: block;
+        content: '';
+        background-image: url('../images/icons/advantages-icon.svg');
+      }
+    }
+  }
+}

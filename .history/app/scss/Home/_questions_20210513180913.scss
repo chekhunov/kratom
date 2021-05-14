@@ -1,0 +1,9 @@
+.questions {
+  padding: 150px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

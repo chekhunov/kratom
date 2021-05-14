@@ -1,0 +1,20 @@
+.advantages {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &::before {
+      display: block;
+      content: '';
+      padding: 11px;
+      background-image: url('../images/icons/advantages-icon.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

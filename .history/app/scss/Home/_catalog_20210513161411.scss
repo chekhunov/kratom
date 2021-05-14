@@ -1,0 +1,10 @@
+.catalog {
+  &__img {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/catalog/2.png');
+    }
+  }
+}

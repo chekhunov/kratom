@@ -1,0 +1,36 @@
+.about {
+  padding: 75px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 625px;
+    height: 383px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+
+  &__inner {
+    max-width: 645px;
+    padding: 0 10px 14px;
+  }
+
+  // &__subtitle {
+  //   margin-bottom: 10px;
+  // }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  &__link {
+    padding: 14px 40px;
+    background-color: #333333;
+    border: 1px solid $bgdefault;
+  }
+}

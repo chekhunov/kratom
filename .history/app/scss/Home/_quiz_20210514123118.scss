@@ -1,0 +1,51 @@
+.quiz {
+  padding: 100px 0;
+  &__link {
+    padding: 14px 85px;
+    background-color: $accent;
+  }
+
+  &__form-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: 14px;
+  }
+
+  &__label {
+    width: 100%;
+    max-width: 635px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid $bgdefault;
+    border-radius: 10px;
+  }
+
+  &__input-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  &__label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+}

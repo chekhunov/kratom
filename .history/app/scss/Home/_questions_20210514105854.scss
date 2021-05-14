@@ -1,0 +1,28 @@
+.questions {
+  padding: 150px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    max-width: 580px;
+  }
+
+  &__link {
+    padding: 14px 72px;
+    background-color: #333333;
+    color: $accent;
+    border: 1px solid $bgdefault;
+  }
+
+  &__text {
+    padding-bottom: 34px;
+  }
+
+  &__right {
+    max-width: 625px;
+  }
+}

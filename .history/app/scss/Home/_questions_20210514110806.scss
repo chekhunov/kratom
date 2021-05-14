@@ -1,0 +1,39 @@
+.questions {
+  padding: 150px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__left {
+    margin-top: -25px;
+    max-width: 580px;
+  }
+
+  &__link {
+    padding: 14px 72px;
+    background-color: #333333;
+    color: $accent;
+    border: 1px solid $bgdefault;
+  }
+
+  &__text {
+    padding-bottom: 20px;
+  }
+
+  &__right {
+    max-width: 625px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $bgdefault;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}

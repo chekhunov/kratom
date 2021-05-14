@@ -1,0 +1,15 @@
+.questions {
+  padding: 150px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    background-color: #333333;
+    color: $accent;
+    border: 1px solid $bgdefault;
+  }
+}

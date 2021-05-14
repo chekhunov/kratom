@@ -1,0 +1,73 @@
+.proposition {
+  position: relative;
+  // height: 100%;
+  max-width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    // left: 13%;
+    right: 95%;
+    // left: 0;
+    width: 1000px;
+    height: 504px;
+    background-color: $accent;
+  }
+
+  &__inner {
+    max-width: 620px;
+    min-height: 504px;
+    margin-left: 40px;
+    padding: 60px 10px 81px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    color: #333333;
+  }
+
+  &__btn {
+    max-width: 232px;
+  }
+
+  &__clock {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__clock-subtitle {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #828282;
+    @extend %montserrat-700;
+  }
+
+  &__clock-item {
+    margin-right: 45px;
+  }
+
+  &__days,
+  &__hours,
+  &__minutes {
+    font-size: 48px;
+    color: #333333;
+    @extend %impact-900;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333333;
+    @extend %montserrat-400;
+  }
+
+  .proposition-text {
+    font-size: 12px;
+  }
+}
