@@ -1,0 +1,57 @@
+.cooperation-card {
+  max-width: 292px;
+  max-height: 200px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+
+  &--first {
+    background-image: url('../images/content/cooperation/1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__top {
+    margin-bottom: 21px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__item span {
+    font-size: 24px;
+    color: $bgdefault;
+    text-transform: uppercase;
+    @extend %impact-900;
+  }
+
+  &__icon {
+    &--contacts {
+      width: 108px;
+      height: 27px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__num {
+    margin-right: 23px;
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px $accent;
+    @extend %impact-900;
+  }
+
+  &__text {
+    padding-top: 5px;
+    font-size: 14px;
+    @extend %montserrat-700;
+  }
+}

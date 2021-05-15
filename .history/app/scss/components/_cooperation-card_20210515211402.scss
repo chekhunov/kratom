@@ -1,0 +1,71 @@
+.cooperation-card {
+  position: relative;
+  max-width: 292px;
+  max-height: 200px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+
+  &--first::after {
+    position: absolute;
+    content: url('../images/icons/cooperation-1.svg');
+    top: 0;
+    left: 33%;
+    z-index: 0;
+  }
+
+  &__top {
+    margin-bottom: 21px;
+    z-index: 10;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__item span {
+    font-size: 24px;
+    color: $bgdefault;
+    text-transform: uppercase;
+    @extend %impact-900;
+  }
+
+  &__icon {
+    &--contacts {
+      width: 108px;
+      height: 27px;
+    }
+
+    &--we {
+      width: 106px;
+      height: 32px;
+    }
+
+    &--discus {
+      width: 106px;
+      height: 37px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__num {
+    margin-right: 23px;
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px $accent;
+    @extend %impact-900;
+  }
+
+  &__text {
+    padding-top: 5px;
+    font-size: 14px;
+    @extend %montserrat-700;
+  }
+}

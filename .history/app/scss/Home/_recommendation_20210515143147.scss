@@ -1,0 +1,25 @@
+.recommendation {
+  padding: 150px 0 75px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 550px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__img {
+    width: 370px;
+    height: 400px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+}

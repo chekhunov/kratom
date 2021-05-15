@@ -1,0 +1,19 @@
+.cooperation-card {
+  max-width: 292px;
+  max-height: 200px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__icon {
+    &--contacts {
+      width: 108px;
+      height: 27px;
+    }
+  }
+}

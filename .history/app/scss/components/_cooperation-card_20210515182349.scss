@@ -1,0 +1,45 @@
+.cooperation-card {
+  max-width: 292px;
+  max-height: 200px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+
+  &__top {
+    margin-bottom: 21px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__item span {
+    font-size: 24px;
+    color: $bgdefault;
+    text-transform: uppercase;
+    @extend %impact-900;
+  }
+
+  &__icon {
+    &--contacts {
+      width: 108px;
+      height: 27px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__num {
+    font-size: 40px;
+    color: transparent;
+    // border: 1px solid $accent;
+    -webkit-text-stroke: 2px $accent;
+    @extend %impact-900;
+  }
+}

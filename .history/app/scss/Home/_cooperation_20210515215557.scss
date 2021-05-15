@@ -1,0 +1,13 @@
+.cooperation {
+  padding: 75px 0 84px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

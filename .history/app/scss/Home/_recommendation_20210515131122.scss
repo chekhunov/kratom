@@ -1,0 +1,13 @@
+.recommendation {
+  padding: 150px 0 75px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img {
+    width: 370px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
