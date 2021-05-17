@@ -1,0 +1,12 @@
+.review-card {
+  max-width: 293px;
+  max-height: 274px;
+  &__content {
+    padding: 40px 20px 20px;
+    width: 293px;
+    height: 204px;
+    background-color: #333333;
+  }
+  &__desc {
+  }
+}

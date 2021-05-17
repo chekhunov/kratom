@@ -1,0 +1,46 @@
+.review-card {
+  max-width: 293px;
+  max-height: 274px;
+  margin-bottom: 40px;
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    padding: 20px 20px 20px;
+    width: 293px;
+    height: 204px;
+    background-color: #333333;
+
+    &::before {
+      content: url('../images/icons/review-rect.svg');
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &__desc {
+    max-height: 144px;
+    line-height: 1.5;
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  &__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  &__profile-title {
+    margin-bottom: 10px;
+  }
+}

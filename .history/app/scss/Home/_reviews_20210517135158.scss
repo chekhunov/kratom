@@ -1,0 +1,12 @@
+.reviews {
+  padding: 75px 0 110px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

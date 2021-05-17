@@ -1,0 +1,9 @@
+.reviews {
+  padding: 75px 110px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
