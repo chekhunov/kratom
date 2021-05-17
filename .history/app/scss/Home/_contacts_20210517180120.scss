@@ -1,0 +1,19 @@
+.contacts {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    color: #f8f2f2;
+    width: 625px;
+    height: 411px;
+  }
+
+  &__icon path {
+    fill: #f8f2f2;
+  }
+}

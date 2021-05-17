@@ -1,0 +1,35 @@
+.contacts {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    color: #ba1111;
+    width: 625px;
+    height: 411px;
+  }
+
+  &__icon path {
+    fill: #fff;
+
+    &:hover {
+      fill: #ba1111;
+    }
+  }
+
+  &__icon svg {
+    color: khaki;
+  }
+
+  &__inner-svg {
+    position: relative;
+  }
+
+  // #AD {
+  //   fill: #3806ee;
+  // }
+}

@@ -1,0 +1,14 @@
+.contacts {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon path {
+    fill: #4f4f4f;
+    width: 625px;
+    height: 411px;
+  }
+}
