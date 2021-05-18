@@ -1,0 +1,34 @@
+.contacts {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    @extend %montserrat-700;
+  }
+
+  &__icon {
+    width: 625px;
+    height: 411px;
+  }
+
+  &__icon path {
+    fill: #fff;
+
+    &:hover {
+      fill: #ba1111;
+    }
+  }
+
+  &__inner-svg {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

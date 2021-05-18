@@ -1,0 +1,62 @@
+.contacts {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    @extend %montserrat-700;
+  }
+
+  &__icon {
+    width: 625px;
+    height: 411px;
+  }
+
+  &__icon path {
+    position: relative;
+    fill: $bgdefault;
+    stroke: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    &.selected {
+      fill: $accent;
+    }
+
+    &:hover {
+      fill: $accent;
+      transition: fill 0.6s;
+    }
+
+    &:active {
+      fill: #fff;
+      transition: fill 0.3s;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form {
+    width: 100%;
+    margin-left: -100%;
+    // float: left;
+    transition: margin-left 0.6s;
+  }
+
+  &__inner-svg {
+    width: 100%;
+    // float: left;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
