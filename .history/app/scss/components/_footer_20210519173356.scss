@@ -1,0 +1,108 @@
+.footer {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    padding: 30px 0;
+    border-top: 1px solid $bgdefault;
+    border-bottom: 1px solid $bgdefault;
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #fff;
+      @extend %montserrat-700;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      &--address {
+        min-width: 200px;
+        &::before {
+          content: url('../images/icons/map-pin.svg');
+          margin-right: 10px;
+          margin-bottom: -5px;
+        }
+      }
+
+      &--mail {
+        &::before {
+          content: url('../images/icons/mail.svg');
+          margin-right: 10px;
+          margin-bottom: -5px;
+        }
+      }
+
+      &--phone {
+        &::before {
+          content: url('../images/icons/phone.svg');
+          margin-right: 10px;
+          margin-bottom: -5px;
+        }
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+
+      &--facebook {
+        width: 10px;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: #828282;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    padding: 20px 0;
+  }
+  &__menu {
+    display: flex;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__menu-link {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

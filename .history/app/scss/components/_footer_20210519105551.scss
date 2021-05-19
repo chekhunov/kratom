@@ -1,0 +1,21 @@
+.footer {
+  &__copy {
+    fz12
+    color: #828282;
+  }
+  &__menu {
+    display: flex;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__menu-link {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

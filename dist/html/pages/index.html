@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kratom</title>
-  <link rel="stylesheet" href="css/style.min.css?v=1.3">
+  <link rel="stylesheet" href="css/style.min.css?v=1.4">
 </head>
 
 <body>
@@ -570,17 +570,68 @@
             In which country do you want to be our partner?
           </p>
 
-          <form class="contacts__country" action="#">
-            <label for="country-select">Select a country</label>
-            <select name="pets" id="country-select">
-              <option value="">Select a country</option>
-              <option value="czechrepublic">🇨🇿 Czech Republic</option>
-              <option value="france">Cat🇫🇷 France</option>
-              <option value="germany">🇩🇪 Germany</option>
-              <option value="italy">🇮🇹 Italy</option>
-              <option value="spain">🇪🇸 Spain</option>
-            </select>
-          </form>
+          @@include('../components/_select-country.html')
+        </div>
+
+        <div class="contacts__box">
+          <div class="contacts__form">
+            <label for="contacts-name" class="contacts__label">Full Name
+              <input id="contacts-name" class="contacts__input contacts__input--name" type="text" name="name">
+            </label>
+
+            <div class="contacts__label-box">
+              <label for="contacts-mail" class="contacts__label">Mail
+                <input id="contacts-mail" class="contacts__input contacts__input--bottom" type="mail" name="email">
+              </label>
+
+              <label for="contacts__phone" class="contacts__label">Phone
+                <input id="contacts__phone" class="contacts__input contacts__input--bottom" type="tel" name="phone">
+              </label>
+            </div>
+
+            <p class="contacts__subtitle">
+              How is it more convenient to contact you?
+            </p>
+
+            <div class="contacts__inner-checkbox">
+              <div class="contacts__holder">
+                <input id="check-phone" class="contacts__input-checkbox" type="radio" name="checkbox-contacts">
+                <label for="check-phone" class="contacts__label-send">
+                  Phone
+                </label>
+              </div>
+
+              <div class="contacts__holder">
+                <input id="check-mail" class="contacts__input-checkbox" type="radio" name="checkbox-contacts">
+                <label for="check-mail" class="contacts__label-send">
+                  Mail
+                </label>
+              </div>
+
+              <div class="contacts__holder">
+                <input id="check-telegram" class="contacts__input-checkbox" type="radio" name="checkbox-contacts">
+                <label for="check-telegram" class="contacts__label-send">
+                  Telegram
+                </label>
+              </div>
+
+              <div class="contacts__holder">
+                <input id="check-whatsapp" class="contacts__input-checkbox" type="radio" name="checkbox-contacts">
+                <label for="check-whatsapp" class="contacts__label-send">
+                  WhatsApp
+                </label>
+              </div>
+
+              <div class="contacts__holder">
+                <input id="check-viber" class="contacts__input-checkbox" type="radio" name="checkbox-contacts">
+                <label for="check-viber" class="contacts__label-send">
+                  Viber
+                </label>
+              </div>
+            </div>
+
+            <a class="contacts__link link" href="#">send us</a>
+          </div>
 
           <div class="contacts__inner-svg">
             <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1343,8 +1394,10 @@
                 title="Zimbabwe" id="ZW" />
             </svg>
           </div>
+
         </div>
       </div>
+
     </section>
   </main>
 
