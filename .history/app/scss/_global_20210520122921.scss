@@ -1,0 +1,128 @@
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-image: url('/images/content/bgimage.png');
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: $default;
+  background-image: url('/images/content/bgimage.png');
+  @extend %montserrat-400;
+  background-repeat: repeat;
+  overflow-x: hidden;
+}
+
+.body--active {
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mobile-menu {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a,
+button {
+  outline: transparent;
+  cursor: pointer;
+}
+
+.logo {
+  margin-right: 30px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include _320 {
+    margin-right: 0;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: $title;
+  text-align: left;
+  text-transform: uppercase;
+  @extend %impact-900;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: $accent;
+  text-transform: uppercase;
+  @extend %montserrat-700;
+}
+
+.link {
+  position: relative;
+  padding: 18px 68px;
+  font-size: 14px;
+  background-color: #b8e959;
+  color: #fffefe;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 0;
+  @extend %impact-900;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -137%;
+    right: 0px;
+    width: 100%;
+    height: 376%;
+    background-color: $accent;
+    z-index: 0;
+    transform: rotate(45deg);
+    transition: transform 0.4s;
+  }
+
+  &:hover::before {
+    transform: rotate(45deg) translate(0px, -100px);
+  }
+}
