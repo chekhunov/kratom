@@ -108,7 +108,6 @@
 
     @include _767 {
       min-width: 320px;
-      margin-left: -20px;
       padding: 10px;
     }
 
@@ -148,10 +147,6 @@
 
     align-items: center;
     @extend %montserrat-700;
-
-    @include _767 {
-      max-width: 230px;
-    }
 
     &:not(:last-child) {
       margin-bottom: 20px;

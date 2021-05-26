@@ -10,100 +10,11 @@
 
 <body>
 
-  <header id="header-section" class="header">
-
-  <div class="container">
-
-    <div class="header__inner">
-
-      <a class="logo" href="#body">
-        <img class="logo__img" src="/images/logo.png" alt="logo image">
-      </a>
-
-      <nav class="menu">
-
-        <ul class="menu__items">
-          <li class="menu__item menu__item--active">
-            <a class="menu__link" href="#">
-              about our tea
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              profitable proposition
-            </a>
-          </li>
-          <li class="menu__item menu__item--hide">
-            <a class="menu__link" href="#">
-              what are you getting?
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">
-              catalog
-            </a>
-          </li>
-          <li class="menu__item menu__item--hide">
-            <a class="menu__link" href="#">
-              FAQ
-            </a>
-          </li>
-          <li class="menu__item menu__item--hide">
-            <a class="menu__link" href="#">
-              reviews
-            </a>
-          </li>
-
-          <li class="menu__item menu__item--popup">
-            <a class="menu__link" href="#">
-              more
-              <svg class="menu__icon">
-                <use xlink:href="images/sprite.svg#arrowDown"></use>
-              </svg>
-            </a>
-
-            <ul class="menu__popup-more">
-              <li class="menu__popup-item">
-                <a class="menu__link" href="#">
-                  what are you getting?
-                </a>
-              </li>
-
-              <li class="menu__popup-item">
-                <a class="menu__link" href="#">
-                  FAQ
-                </a>
-              </li>
-
-              <li class="menu__popup-item">
-                <a class="menu__link" href="#">
-                  reviews
-                </a>
-              </li>
-            </ul>
-
-          </li>
-        </ul>
-
-        <a class="menu__link-btn link link--black">
-          <span class="link__text">contact us</span>
-        </a>
-
-      </nav>
-
-      <button class="header__popup-btn">
-        <span></span>
-      </button>
-
-    </div>
-  </div>
-
-</header>
+  @@include('../components/_header.html')
 
   <main class="main">
 
     <section class="top">
-      <img class="top__img-mob" src="./images/content/top/1.jpg" alt="top images">
       <div class="container">
         <div class="top__wrapper">
           <div class="top__left">
@@ -649,103 +560,7 @@
 
         <div class="cooperation__items">
 
-          <article class="cooperation-card cooperation-card--first">
-  <div class="cooperation-card__top">
-    <div class="cooperation-card__item">
-      <span>Your</span>
-      <svg class="cooperation-card__icon cooperation-card__icon--contacts">
-        <use xlink:href="images/sprite.svg#cooperation-tel"></use>
-      </svg>
-    </div>
-
-    <div class="cooperation-card__item">
-      <span>contacts</span>
-      <svg class="cooperation-card__icon cooperation-card__icon--contacts">
-        <use xlink:href="images/sprite.svg#cooperation-mail"></use>
-      </svg>
-    </div>
-  </div>
-
-  <div class="cooperation-card__bottom">
-    <span class="cooperation-card__num">
-      1
-    </span>
-    <p class="cooperation-card__text">
-      Leave your contacts or write to us in messengers
-    </p>
-  </div>
-</article>
-
-<article class="cooperation-card cooperation-card--second">
-  <div class="cooperation-card__top">
-    <div class="cooperation-card__item">
-      <span>we</span>
-      <svg class="cooperation-card__icon cooperation-card__icon--we">
-        <use xlink:href="images/sprite.svg#cooperation-we"></use>
-      </svg>
-    </div>
-
-    <div class="cooperation-card__item">
-      <span>discuss</span>
-      <svg class="cooperation-card__icon cooperation-card__icon--discus">
-        <use xlink:href="images/sprite.svg#cooperation-discus"></use>
-      </svg>
-    </div>
-  </div>
-
-  <div class="cooperation-card__bottom">
-    <span class="cooperation-card__num">
-      2
-    </span>
-    <p class="cooperation-card__text">
-      We discuss details and answer your questions
-    </p>
-  </div>
-</article>
-
-<article class="cooperation-card cooperation-card--third">
-  <div class="cooperation-card__top">
-    <div class="cooperation-card__item cooperation-card__item--agreement">
-      <span>agreement</span>
-      <svg class="cooperation-card__icon cooperation-card__icon--agreement">
-        <use xlink:href="images/sprite.svg#cooperation-agreement"></use>
-      </svg>
-    </div>
-  </div>
-
-  <div class="cooperation-card__bottom">
-    <span class="cooperation-card__num">
-      3
-    </span>
-    <p class="cooperation-card__text">
-      We conclude an agreement
-    </p>
-  </div>
-</article>
-
-<article class="cooperation-card cooperation-card--fourth">
-  <div class="cooperation-card__top">
-    <div class="cooperation-card__item cooperation-card__item--tea">
-      <div class="cooperation-card__inner">
-        <span>tea</span>
-        <span>delivery</span>
-      </div>
-
-      <svg class="cooperation-card__icon cooperation-card__icon--tea">
-        <use xlink:href="images/sprite.svg#cooperation-tea"></use>
-      </svg>
-    </div>
-  </div>
-
-  <div class="cooperation-card__bottom">
-    <span class="cooperation-card__num">
-      4
-    </span>
-    <p class="cooperation-card__text">
-      We supply you with a batch of tea
-    </p>
-  </div>
-</article>
+          @@include('../components/_cooperation-card.html')
 
         </div>
       </div>
@@ -763,130 +578,7 @@
 
         <div class="reviews__items">
 
-          <article class="review-card">
-  <div class="review-card__wrapper">
-    <div class="review-card__content">
-      <p class="review-card__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-        ipsum
-        dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
-
-    <div class="review-card__profile">
-      <img class="review-card__img" src="./images/content/review/profile/1.png" alt="image user">
-      <div class="review-card__box">
-        <div class="review-card__profile-title">
-          Arlene McCoy
-        </div>
-
-        <div class="review-card__profile-desc">
-          34 y.o., field of activity
-        </div>
-      </div>
-    </div>
-  </div>
-
-</article>
-
-<article class="review-card">
-  <div class="review-card__content">
-    <p class="review-card__desc">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur
-    </p>
-  </div>
-
-  <div class="review-card__profile">
-    <img class="review-card__img" src="./images/content/review/profile/2.png" alt="image user">
-    <div class="review-card__box">
-      <div class="review-card__profile-title">
-        Robert Fox
-      </div>
-
-      <div class="review-card__profile-desc">
-        34 y.o., field of activity
-      </div>
-    </div>
-  </div>
-</article>
-
-<article class="review-card">
-  <div class="review-card__content">
-    <p class="review-card__desc">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-      ipsum
-      dolor sit amet, consectetur adipiscing elit...
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-      ipsum
-      dolor sit amet, consectetur adipiscing elit...
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-      ipsum
-      dolor sit amet, consectetur adipiscing elit...
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-      ipsum
-      dolor sit amet, consectetur adipiscing elit...
-    </p>
-  </div>
-
-  <div class="review-card__profile">
-    <img class="review-card__img" src="./images/content/review/profile/3.png" alt="image user">
-    <div class="review-card__box">
-      <div class="review-card__profile-title">
-        Dianne Russell
-      </div>
-
-      <div class="review-card__profile-desc">
-        34 y.o., field of activity
-      </div>
-    </div>
-  </div>
-</article>
-
-<article class="review-card">
-  <div class="review-card__content">
-    <p class="review-card__desc">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra non consectetur tincidunt erat venenatis. Lorem
-      ipsum
-      dolor sit amet,
-    </p>
-  </div>
-  <div class="review-card__profile">
-    <img class="review-card__img" src="./images/content/review/profile/4.png" alt="image user">
-    <div class="review-card__box">
-      <div class="review-card__profile-title">
-        Jacob Jones
-      </div>
-
-      <div class="review-card__profile-desc">
-        34 y.o., field of activity
-      </div>
-    </div>
-  </div>
-</article>
+          @@include('../components/_review-card.html')
 
         </div>
       </div>
@@ -907,11 +599,7 @@
             In which country do you want to be our partner?
           </p>
 
-          <div class="select">
-  <input class="select__input" type="hidden" name="">
-  <div class="select__head">Select a country</div>
-  <div class="select__inner"></div>
-</div>
+          @@include('../components/_select-country.html')
         </div>
 
         <div class="contacts__box">
@@ -1744,7 +1432,7 @@
     </section> -->
   </main>
 
-  
+  @@include('../components/_footer.html')
 
   <div class="mobile-menu">
     <ul class="mobile-menu__items">

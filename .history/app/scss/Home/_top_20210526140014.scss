@@ -1,22 +1,15 @@
 .top {
   padding: 70px 0 93px;
+  // margin-bottom: -1px;
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    @include _767 {
-      flex-direction: column;
-    }
   }
 
   &__left {
     width: calc(70% - 70px);
-
-    @include _767 {
-      width: 100%;
-    }
   }
 
   &__title {
@@ -38,11 +31,6 @@
       line-height: 1.2;
       letter-spacing: 0;
     }
-
-    @include _767 {
-      padding-top: 30px;
-      font-size: 36px;
-    }
     & span {
       color: $accent;
     }
@@ -61,18 +49,12 @@
 
     @include _1024 {
       padding-bottom: 20px;
-      letter-spacing: 1px;
     }
   }
 
   &__right {
     margin-right: -70px;
     z-index: 0;
-
-    @include _767 {
-      display: flex;
-      margin: 0 auto;
-    }
   }
 
   &__img {
@@ -84,17 +66,6 @@
       max-width: 280px;
       min-width: 0;
     }
-    @include _767 {
-      display: none;
-    }
-  }
-
-  &__img-mob {
-    display: none;
-
-    @include _767 {
-      display: inline-block;
-    }
   }
 
   &__content {
@@ -104,12 +75,6 @@
 
     @include _1140 {
       max-height: 160px;
-    }
-
-    @include _767 {
-      min-width: 320px;
-      margin-left: -20px;
-      padding: 10px;
     }
 
     &::before {
@@ -127,15 +92,6 @@
     }
   }
 
-  &__link {
-    @include _767 {
-      display: flex;
-      justify-content: center;
-      max-width: 280px;
-      margin: 0 auto 30px;
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -148,10 +104,6 @@
 
     align-items: center;
     @extend %montserrat-700;
-
-    @include _767 {
-      max-width: 230px;
-    }
 
     &:not(:last-child) {
       margin-bottom: 20px;

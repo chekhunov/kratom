@@ -1,5 +1,6 @@
 .top {
   padding: 70px 0 93px;
+  // margin-bottom: -1px;
   &__wrapper {
     position: relative;
     display: flex;
@@ -106,12 +107,6 @@
       max-height: 160px;
     }
 
-    @include _767 {
-      min-width: 320px;
-      margin-left: -20px;
-      padding: 10px;
-    }
-
     &::before {
       position: absolute;
       content: '';
@@ -148,10 +143,6 @@
 
     align-items: center;
     @extend %montserrat-700;
-
-    @include _767 {
-      max-width: 230px;
-    }
 
     &:not(:last-child) {
       margin-bottom: 20px;

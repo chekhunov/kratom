@@ -72,6 +72,7 @@
     @include _767 {
       display: flex;
       margin: 0 auto;
+      margin-left: -20px;
     }
   }
 
@@ -108,7 +109,6 @@
 
     @include _767 {
       min-width: 320px;
-      margin-left: -20px;
       padding: 10px;
     }
 
