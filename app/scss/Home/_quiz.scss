@@ -3,6 +3,14 @@
   padding: 100px 0 114px;
   background-color: #333333;
 
+  @include _1140 {
+    padding: 50px 0 20px;
+  }
+
+  @include _767 {
+    padding: 50px 0 30px;
+  }
+
   &__wrapper {
     position: relative;
   }
@@ -72,6 +80,14 @@
     font-size: 14px;
     color: $accent;
 
+    @include _767 {
+      padding-top: 20px;
+    }
+
+    @include _480 {
+      padding-top: 40px;
+    }
+
     &::after {
       display: block;
       content: '';
@@ -133,6 +149,11 @@
     border: 1px solid $bgdefault;
     border-radius: 10px;
 
+    @include _1140 {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
     &--small {
       max-width: 198px;
     }
@@ -141,11 +162,19 @@
   &__box-form {
     display: flex;
     justify-content: space-between;
+    @include _480 {
+      flex-direction: column;
+    }
   }
   &__box-label {
     width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
+
+    @include _480 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     & span {
       margin-bottom: 10px;
@@ -199,6 +228,10 @@
   &__link {
     padding: 14px 85px;
     z-index: 999;
+
+    @include _480 {
+      padding: 14px 48px;
+    }
     &--prev {
       margin-right: 30px;
       color: $accent;
@@ -223,6 +256,10 @@
       padding: 14px 48px;
       height: fit-content;
 
+      @include _480 {
+        padding: 14px 20px;
+      }
+
       &.disabled {
         opacity: 0.5;
         pointer-events: none;
@@ -238,6 +275,10 @@
   &__navigation {
     display: flex;
     justify-content: flex-end;
+
+    @include _480 {
+      justify-content: space-between;
+    }
   }
 
   &__modal-block {

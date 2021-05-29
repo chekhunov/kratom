@@ -29,10 +29,23 @@
       padding: 11px;
       background-image: url('../images/icons/advantages-icon.svg');
       background-repeat: no-repeat;
+
+      @include _767 {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include _767 {
+      flex-direction: column;
     }
   }
 
   &__desc {
     margin-left: 42px;
+
+    @include _767 {
+      margin-left: 0;
+    }
   }
 }

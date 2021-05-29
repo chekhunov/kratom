@@ -1,6 +1,10 @@
 .contacts {
   padding: 75px 0 100px;
 
+  @include _767 {
+    padding: 25px 0 50px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -43,11 +47,30 @@
     display: flex;
     align-items: center;
 
+    @include _1140 {
+      max-width: 625px;
+      margin: 0 auto;
+    }
+
+    @include _767 {
+      align-items: flex-start;
+    }
+
     &.active {
       .contacts__form {
         margin-left: 0;
         margin-right: 98px;
         opacity: 1;
+
+        @include _1140 {
+          margin-right: 0;
+        }
+      }
+
+      @include _1140 {
+        .contacts__inner-svg {
+          width: 0;
+        }
       }
     }
   }
@@ -57,6 +80,10 @@
     margin-left: -100%;
     opacity: 0;
     transition: margin-left 0.6s;
+
+    @include _1140 {
+      max-width: 625px;
+    }
   }
 
   &__inner-svg {
@@ -65,6 +92,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include _1140 {
+      transition: width 0.6s;
+    }
   }
 
   &__label {
@@ -73,6 +103,9 @@
     align-items: flex-start;
     font-size: 12px;
     margin-bottom: 10px;
+    @include _767 {
+      width: 100%;
+    }
   }
 
   &__label-box {
@@ -80,6 +113,11 @@
     justify-content: space-between;
     align-items: center;
     margin-right: -20px;
+
+    @include _767 {
+      flex-direction: column;
+      margin-right: 0;
+    }
   }
 
   &__input {
@@ -90,6 +128,10 @@
     margin-top: 10px;
     margin-bottom: 20px;
 
+    @include _767 {
+      width: 100%;
+    }
+
     &--name {
       width: 100%;
       max-width: 100%;
@@ -98,6 +140,10 @@
     &--bottom {
       min-width: 303px;
       margin-right: 20px;
+
+      @include _767 {
+        min-width: initial;
+      }
     }
   }
 
@@ -122,6 +168,10 @@
 
   &__subtitle {
     margin-bottom: 30px;
+
+    @include _767 {
+      margin-bottom: 10px;
+    }
   }
 
   &__label-send {

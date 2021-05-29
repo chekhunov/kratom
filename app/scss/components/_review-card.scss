@@ -4,6 +4,16 @@
   margin-bottom: 40px;
   transition: width 0.6s;
 
+  @include _1140 {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  @include _767 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
   &__content {
     margin-bottom: 20px;
     padding: 20px 20px 20px;
@@ -77,6 +87,14 @@
     width: 35%;
     margin-bottom: 40px;
     z-index: 40;
+
+    @include _1140 {
+      width: 50%;
+    }
+
+    @include _767 {
+      width: 100%;
+    }
 
     &::before {
       position: fixed;

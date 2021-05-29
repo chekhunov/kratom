@@ -1,12 +1,32 @@
 .reviews {
   padding: 75px 0 110px;
 
+  @include _1140 {
+    padding: 50px 0;
+  }
+
+  @include _767 {
+    padding: 25px 0;
+  }
   &__title {
     margin-bottom: 50px;
+
+    @include _1140 {
+      margin-bottom: 30px;
+      padding-bottom: 0;
+    }
+
+    @include _767 {
+      font-size: 30px;
+    }
   }
   &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _1140 {
+      flex-wrap: wrap;
+    }
   }
 }

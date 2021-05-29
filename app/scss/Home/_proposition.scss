@@ -1,20 +1,34 @@
 .proposition {
   position: relative;
-  // height: 100%;
   max-width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
+  @include _1140 {
+    background-position: 21%;
+  }
+
+  @include _480 {
+    background-position: 46%;
+  }
+
   &::after {
     position: absolute;
     content: '';
     top: 0;
-    // left: 13%;
     right: 95%;
-    // left: 0;
     width: 1000px;
     height: 504px;
     background-color: $accent;
+    @include _1140 {
+      right: 98%;
+    }
+
+    @include _767 {
+      right: 98%;
+      min-height: 519px;
+    }
   }
 
   &__inner {
@@ -25,14 +39,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include _767 {
+      padding: 50px 10px;
+      min-height: 519px;
+    }
+
+    @include _480 {
+      margin-left: 0;
+    }
   }
 
   &__title {
     color: #333333;
+
+    @include _767 {
+      font-size: 30px;
+    }
   }
 
   &__link {
     max-width: 232px;
+
+    @include _480 {
+      max-width: 280px;
+      padding: 18px 85px;
+      text-align: center;
+    }
   }
 
   &__clock {
@@ -57,9 +90,13 @@
     font-size: 48px;
     color: #333333;
     @extend %impact-900;
+    @include _767 {
+      font-size: 40px;
+    }
   }
 
   &__text {
+    max-width: 553px;
     margin-bottom: 20px;
     font-size: 18px;
     color: #333333;

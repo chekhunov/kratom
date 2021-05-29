@@ -4,6 +4,18 @@
   }
 }
 
+@mixin _1439 {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin _1140 {
   @media (max-width: 1140px) {
     @content;
@@ -18,6 +30,18 @@
 
 @mixin _767 {
   @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin _380 {
+  @media (max-width: 380px) {
     @content;
   }
 }

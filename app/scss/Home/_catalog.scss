@@ -1,6 +1,10 @@
 .catalog {
   padding: 150px 0;
 
+  @include _1140 {
+    padding: 100px 0;
+  }
+
   position: relative;
   &::before {
     position: absolute;
@@ -8,23 +12,44 @@
     top: 18%;
     right: -10%;
     transform: rotateZ(57deg);
-    z-index: 1;
+    z-index: -1;
+
+    @include _1140 {
+      display: none;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include _767 {
+      flex-direction: column;
+    }
   }
   &__images {
     position: relative;
     max-width: 385px;
     margin-right: 160px;
-
     z-index: 1;
+
+    @include _1024 {
+      margin-right: 20px;
+    }
+
+    @include _767 {
+      max-width: 229px;
+      margin-right: 0;
+      margin-bottom: 65px;
+    }
     &::before {
       position: absolute;
-      content: url('../images/content/catalog/2.png');
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #2d2c2c;
+      // background-color: red;
+      transform: rotate(-57deg);
       top: 0;
       left: 0;
       z-index: -1;
@@ -33,27 +58,36 @@
 
   &__subtitle {
     margin-bottom: 10px;
+    z-index: 2;
   }
 
   &__text {
     padding-bottom: 48px;
     font-size: 16px;
+    z-index: 2;
   }
   &__inner {
     max-width: 564px;
+    z-index: 2;
   }
 
   &__title {
     padding-bottom: 5px;
+
+    @include _767 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
     color: $accent;
     border: 1px solid $bgdefault;
-
-    &::before {
-      top: -142%;
-      height: 387%;
+    @include _767 {
+      max-width: 281px;
+      margin: 0 auto;
+      padding: 18px 67px;
+      display: block;
     }
   }
 

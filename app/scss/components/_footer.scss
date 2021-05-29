@@ -20,6 +20,9 @@
     @include _1024 {
       align-items: flex-start;
     }
+    @include _767 {
+      flex-direction: column;
+    }
   }
 
   .contact {
@@ -29,6 +32,10 @@
     @include _1024 {
       flex-direction: column;
       margin-right: 20px;
+    }
+    @include _767 {
+      margin-right: 0px;
+      margin-bottom: 30px;
     }
 
     &__text {
@@ -81,9 +88,17 @@
     justify-content: space-between;
     align-items: center;
 
+    @include _767 {
+      margin: 0 auto;
+    }
+
     &__item {
       &:not(:last-child) {
         margin-right: 40px;
+
+        @include _767 {
+          margin-right: 25px;
+        }
       }
     }
 
@@ -111,6 +126,10 @@
     font-size: 12px;
     color: #828282;
     text-transform: uppercase;
+
+    @include _767 {
+      margin-bottom: 20px;
+    }
   }
 
   &__bottom {
@@ -118,11 +137,20 @@
   }
   &__menu {
     display: flex;
+
+    @include _767 {
+      flex-direction: column;
+    }
   }
 
   &__menu-item {
     &:not(:last-child) {
       margin-right: 20px;
+
+      @include _767 {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 

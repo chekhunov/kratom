@@ -2,17 +2,27 @@
   position: relative;
   height: 191px;
   max-width: 292px;
-  // min-height: 191px;
-  // max-height: 191px;
-
   margin-bottom: 40px;
-
   padding: 20px;
   background-color: #333333;
   border-radius: 10px;
 
+  @include _1140 {
+    max-width: 100%;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  @include _767 {
+    width: 100%;
+  }
+
   &:not(:last-child) {
     margin-right: 40px;
+
+    @include _1140 {
+      margin-right: 0;
+    }
   }
 
   &--first::after {
