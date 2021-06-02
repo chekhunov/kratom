@@ -44,6 +44,11 @@
       font-size: 14px;
       color: #fff;
       @extend %montserrat-700;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $accent;
+      }
 
       &:not(:last-child) {
         margin-right: 30px;
@@ -102,7 +107,19 @@
       }
     }
 
+    &__link {
+      color: white;
+      transition: color 0.3s;
+
+      &:hover {
+        .socials__icon {
+          fill: $accent;
+        }
+      }
+    }
+
     &__icon {
+      fill: white;
       width: 20px;
       height: 20px;
 
@@ -158,5 +175,10 @@
     font-size: 12px;
     color: #fff;
     text-transform: uppercase;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
   }
 }

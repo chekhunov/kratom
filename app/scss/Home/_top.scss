@@ -1,5 +1,5 @@
 .top {
-  padding: 70px 0 93px;
+  padding: 70px 0 75px;
 
   @include _767 {
     margin-bottom: 100px;
@@ -115,6 +115,7 @@
     display: none;
 
     @include _767 {
+      width: 100%;
       display: inline-block;
     }
   }
@@ -131,8 +132,9 @@
     @include _767 {
       min-width: 280px;
       margin-left: 0px;
-      padding: 10px 0;
+      padding: 10px 0 10px 15px;
       width: 100%;
+      background-color: transparent;
     }
 
     &::before {
@@ -155,10 +157,12 @@
   }
 
   &__link {
+    max-width: 290px;
+    height: 53px;
     @include _767 {
       display: flex;
       justify-content: center;
-      max-width: 280px;
+      max-width: 100%;
       margin: 0 auto 30px;
     }
   }

@@ -65,7 +65,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/@benmajor/jquery-touch-events/src/jquery.mobile-events.min.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))

@@ -1,7 +1,20 @@
 $(function () {
+  $('#quiz_id').swiperight(function (e, touch) {
+    if (isNextAllow()) $('.quiz__link--next').click();
+  });
+
+  $('#quiz_id').swipeleft(function (e, touch) {
+    if (isPrevAllow()) $('.quiz__link--prev').click();
+  });
+
   $('.header__popup-btn').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('body--active');
+  });
+
+  $('.mobile-menu__link').on('click', function () {
+    $('body').removeClass('body--active');
+    showSectionFirstle();
   });
 
   function getTimeRemaining(endtime) {
@@ -45,6 +58,34 @@ $(function () {
 
   //достаем модалку
   $('.quiz__link--end').on('click', function () {
+    let answers = [];
+    $('.quiz__test').each(function (key, item) {
+      let obj = {};
+      if ($(item).next().length != 0) {
+        obj = {
+          answer: $(item)
+            .find('input:checked')
+            .next()
+            .text()
+            .replace(/[\r\n]+/g, ' ')
+            .replace(/  +/g, ' ')
+            .trim(),
+          question: $($('.quiz__subject')[key])
+            .text()
+            .replace(/[\r\n]+/g, '')
+            .replace(/  +/g, ' ')
+            .trim(),
+        };
+      } else {
+        obj = {
+          name: $('#name-user').val().trim(),
+          mail: $('#mail-user').val().trim(),
+        };
+      }
+      answers.push(obj);
+    });
+
+    console.log(answers);
     $('.quiz__modal-block').addClass('active');
     $('body').addClass('overflow');
   });
@@ -238,16 +279,25 @@ $(function () {
   //проверка чекбоксов и включение выключение кнопки перехода
   $(document).on('click', '.quiz__link.quiz__link--next', function (e) {
     e.preventDefault();
-
-    $(document)
-      .find('.quiz__test--active')
-      .find('.quiz__input-checkbox')
-      .each(function (key, item) {
-        if ($(item).is(':checked')) {
-          $('.quiz__link--next').removeClass('disabled');
-        }
-      });
+    if (isNextAllow()) $('.quiz__link--next').removeClass('disabled');
   });
+
+  function isNextAllow() {
+    var is_ok = false;
+
+    $('.quiz__test--active .quiz__input-checkbox').each(function (key, item) {
+      if ($(item).is(':checked')) {
+        is_ok = true;
+        return;
+      }
+    });
+
+    return is_ok;
+  }
+
+  function isPrevAllow() {
+    return $(document).find('.quiz__test--active').prev().length != 0;
+  }
 
   //клик по чекбоксу включает кнопку некст
   $(
@@ -276,25 +326,6 @@ $(function () {
     this.quiz = quiz;
     this.answer = answer;
   }
-  var checklist = [];
-
-  $(document).on('change', '.quiz__input-checkbox', function () {
-    var val = $(this).next().text(); // to int
-    var html = $('.quiz__subject--active').text();
-
-    if (this.checked) {
-      checklist = new newObj(html, val);
-    } else {
-      var idx = $.inArray(val, checklist);
-      if (idx > -1) {
-        checklist.splice(idx, 1);
-      }
-    }
-
-    $('');
-
-    console.log(checklist);
-  });
 
   $('.quiz__link--next').on('click', function () {
     let lastChild = $('.quiz__test--active').next().length;
@@ -314,4 +345,44 @@ $(function () {
       $('.quiz__link--end').css('display', 'none');
     }
   });
+
+  let arrTopSections = [];
+  function detectActiveSection() {
+    var scrolled;
+    let screenHeight = $(window).height();
+
+    scrolled = (window.pageYOffset || document.documentElement.scrollTop) + screenHeight * 0.85;
+
+    let foundIndex = arrTopSections.findIndex(function (item, index, array) {
+      // console.log(item, index, array);
+      if (scrolled >= item && scrolled <= array[index + 1]) {
+        return true;
+      }
+    });
+    return foundIndex;
+  }
+
+  function showSectionFirstle() {
+    let foundIndex = detectActiveSection();
+
+    for (let i = 0; i <= foundIndex; i++) {
+      $('section').eq(i).addClass('show');
+    }
+  }
+
+  function scrolling() {
+    $('.animate-section').each(function (key, item) {
+      arrTopSections.push($(item).offset().top);
+    });
+
+    showSectionFirstle();
+    // detectActiveSection();
+
+    window.onscroll = function () {
+      let foundIndex = detectActiveSection();
+      $('section').eq(foundIndex).addClass('show');
+    };
+  }
+
+  scrolling();
 });

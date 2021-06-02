@@ -1,6 +1,6 @@
 .quiz {
   width: 100%;
-  padding: 100px 0 114px;
+  padding: 100px 0;
   background-color: #333333;
 
   @include _1140 {
@@ -148,14 +148,27 @@
     display: flex;
     border: 1px solid $bgdefault;
     border-radius: 10px;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid $accent;
+    }
 
     @include _1140 {
       max-width: 100%;
       margin-bottom: 10px;
     }
 
+    @include _767 {
+      justify-content: center;
+    }
+
     &--small {
-      max-width: 198px;
+      max-width: 178px;
+
+      @include _767 {
+        max-width: 130px;
+      }
     }
   }
 
@@ -182,6 +195,7 @@
   }
 
   &__label {
+    cursor: pointer;
     &::before {
       content: '';
       display: inline-block;
@@ -226,12 +240,9 @@
   }
 
   &__link {
-    padding: 14px 85px;
+    max-width: 200px;
+    height: 46px;
     z-index: 999;
-
-    @include _480 {
-      padding: 14px 48px;
-    }
     &--prev {
       margin-right: 30px;
       color: $accent;
@@ -253,12 +264,6 @@
     }
     &--end {
       display: none;
-      padding: 14px 48px;
-      height: fit-content;
-
-      @include _480 {
-        padding: 14px 20px;
-      }
 
       &.disabled {
         opacity: 0.5;
@@ -324,6 +329,8 @@
     }
 
     &__link {
+      max-width: 158px;
+      height: 46px;
       color: $accent;
     }
   }

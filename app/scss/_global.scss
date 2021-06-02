@@ -2,8 +2,11 @@
 
 html,
 body {
-  // height: 100%;
   overflow-x: hidden;
+}
+
+.animate-section {
+  opacity: 0;
 }
 
 .overflow {
@@ -12,11 +15,12 @@ body {
 
 .mobile-menu {
   display: none;
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
   width: 100%;
   max-width: 100%;
   background-image: url('/images/content/bgimage.png');
+  z-index: 6666;
 }
 
 body {
@@ -34,6 +38,13 @@ body {
 .body--active {
   .mobile-menu {
     display: flex;
+  }
+
+  .header__popup-btn::before {
+    transform: rotate(45deg) translateY(4px);
+  }
+  .header__popup-btn::after {
+    transform: rotate(-45deg) translateY(-4px);
   }
 }
 
@@ -103,8 +114,12 @@ button {
 
 .link {
   position: relative;
-  display: inline-block;
-  padding: 18px 68px;
+  width: 100%;
+  max-width: 251px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   background-color: #b8e959;
   color: #fffefe;
@@ -122,7 +137,7 @@ button {
     right: 0px;
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 500%;
     background-color: #acda53;
     z-index: 0;
     transform-origin: top;
@@ -152,4 +167,9 @@ button {
     height: 100%;
     overflow: hidden;
   }
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 1s;
 }

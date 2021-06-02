@@ -81,13 +81,14 @@
   }
 
   &__link {
+    max-width: 237px;
+    height: 53px;
     color: $accent;
     border: 1px solid $bgdefault;
     @include _767 {
-      max-width: 281px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 18px 67px;
-      display: block;
+      text-align: center;
     }
   }
 

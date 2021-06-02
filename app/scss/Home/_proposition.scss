@@ -43,6 +43,8 @@
     @include _767 {
       padding: 50px 10px;
       min-height: 519px;
+      margin-left: 0;
+      margin: 0 auto;
     }
 
     @include _480 {
@@ -60,9 +62,10 @@
 
   &__link {
     max-width: 232px;
+    height: 53px;
 
-    @include _480 {
-      max-width: 280px;
+    @include _767 {
+      max-width: 100%;
       padding: 18px 85px;
       text-align: center;
     }

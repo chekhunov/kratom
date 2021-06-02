@@ -10,6 +10,9 @@
     flex-direction: column;
     align-items: center;
   }
+  &__title {
+    margin-bottom: 30px;
+  }
 
   &__text {
     font-size: 20px;
@@ -148,7 +151,13 @@
   }
 
   &__link {
-    padding: 18px 98px;
+    max-width: 250px;
+    height: 53px;
+
+    @include _767 {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__inner-checkbox {
@@ -157,12 +166,21 @@
     align-items: center;
     margin-bottom: 66px;
     font-size: 14px;
+
+    @include _767 {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
   }
 
   &__holder {
     position: relative;
     &:not(:last-child) {
       margin-right: 10px;
+    }
+
+    @include _767 {
+      margin-bottom: 15px;
     }
   }
 
@@ -176,11 +194,16 @@
 
   &__label-send {
     user-select: none;
+    transition: color 0.3s;
+    &:hover {
+      color: $accent;
+    }
     &::before {
       content: '';
       display: inline-block;
       width: 16px;
       height: 16px;
+      margin-bottom: -3px;
       flex-shrink: 0;
       flex-grow: 0;
       border: 1px solid #4f4f4f;
@@ -204,7 +227,7 @@
         width: 10px;
         height: 10px;
         left: 3px;
-        top: 3px;
+        top: 4px;
         border-radius: 50%;
         background-color: $accent;
         z-index: 99999;

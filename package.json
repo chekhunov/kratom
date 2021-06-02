@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "gulpfile.js",
   "dependencies": {
+    "@benmajor/jquery-touch-events": "github:benmajor/jQuery-Touch-Events",
     "abbrev": "^1.1.1",
     "ajv": "^6.12.6",
     "amdefine": "^1.0.1",
@@ -411,7 +412,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1",
-    "slick-carousel": "^1.8.1"
+    "jquery-touch-events": "^1.0.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
