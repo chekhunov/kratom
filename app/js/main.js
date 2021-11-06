@@ -296,7 +296,7 @@ $(function () {
   }
 
   function isPrevAllow() {
-    return $(document).find('.quiz__test--active').prev().length != 0;
+    return $(document).find('.quiz__test--active').prev().length !== 0;
   }
 
   //клик по чекбоксу включает кнопку некст
@@ -308,8 +308,8 @@ $(function () {
 
   //после заполнения формы прячем и меняем кнопки
   $('input#name-user,input#mail-user').on('keyup', function (event) {
-    var name = $('input#name-user').val();
-    var email = $('input#mail-user').val();
+    let name = $('input#name-user').val();
+    let email = $('input#mail-user').val();
 
     if (name.length > 3 && email.length > 6) {
       $('.quiz__link--end').removeClass('disabled');
@@ -329,7 +329,7 @@ $(function () {
 
   $('.quiz__link--next').on('click', function () {
     let lastChild = $('.quiz__test--active').next().length;
-    if (lastChild == 0) {
+    if (lastChild === 0) {
       $('.quiz__link--next').css('display', 'none');
       $('.quiz__link--end').css('display', 'inline-block');
       $('.quiz__link--end').addClass('disabled');
@@ -340,7 +340,7 @@ $(function () {
 
   $('.quiz__link--prev').on('click', function () {
     let lastChild = $('.quiz__test--active').next().length;
-    if (lastChild != 0) {
+    if (lastChild !== 0) {
       $('.quiz__link--next').css('display', 'inline-block');
       $('.quiz__link--end').css('display', 'none');
     }
@@ -348,13 +348,14 @@ $(function () {
 
   let arrTopSections = [];
   function detectActiveSection() {
-    var scrolled;
-    let screenHeight = $(window).height();
+    let scrolled;
+    let screenHeight = window.innerHeight //быстрее чем ниже в 10 раз
+    // let screenHeight = $(window).height();
 
     scrolled = (window.pageYOffset || document.documentElement.scrollTop) + screenHeight * 0.85;
 
     let foundIndex = arrTopSections.findIndex(function (item, index, array) {
-      // console.log(item, index, array);
+      console.log(item, index, array);
       if (scrolled >= item && scrolled <= array[index + 1]) {
         return true;
       }
@@ -383,6 +384,5 @@ $(function () {
       $('section').eq(foundIndex).addClass('show');
     };
   }
-
   scrolling();
 });
